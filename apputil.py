@@ -58,7 +58,7 @@ class MarkovText(object):
 
         # Handle seed term
         if seed_term is not None:
-            if seed_term not in self.corpus.split():
+            if seed_term not in self.term_dict:
                 raise ValueError("Seed term not found in corpus.")
             current_word = seed_term
         else:
